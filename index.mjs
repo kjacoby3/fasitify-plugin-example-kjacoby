@@ -1,5 +1,7 @@
 export default async function plugin(fastify, options) {
-  fastify.get('/jacoby', async function (request, reply) {
-    return { Koen: 'knows how to create a Fastify plugin' };
+  fastify.get('/Jacoby', async function (request, reply) {
+    reply
+      .header('Content-Type', 'text/html')
+      .send('<html><h1>Jacoby is a cool guy</h1></html>')
   });
 }
